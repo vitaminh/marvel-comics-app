@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
-import { ComicList } from './components';
+import {ComicList, SingleComic} from './components';
 import { Layout } from './components/Layout';
 // import { Home } from './components/Home';
 import { FetchData } from './components/FetchData';
@@ -20,6 +20,7 @@ export default class App extends Component {
         <Route path='/counter' component={Counter} />
         <AuthorizeRoute path='/fetch-data' component={FetchData} />
         <Route path={ApplicationPaths.ApiAuthorizationPrefix} component={ApiAuthorizationRoutes} />
+        <Route path="/comics/:id" component={SingleComic} />
         <Route exact path='/' component={ComicList} />
       </Layout>
     );
