@@ -4,8 +4,8 @@
  * having to figure out which file they belong to!
  */
 
-export { default as CharacterList } from './CharacterList';
-export { default as ComicList } from './ComicList';
+export { default as CharacterList } from './characterList';
+export { default as ComicList } from './comicList';
 export { default as SingleComic } from './SingleComic';
 export { default as Header } from './Header';
 export { default as Footer } from './Footer';

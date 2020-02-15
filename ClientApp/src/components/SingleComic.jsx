@@ -1,7 +1,10 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import {
+  Card, CardBody, CardImg, CardTitle
+} from 'reactstrap';
 
-import {SITE_NAME} from './Constants';
+import {SITE_NAME} from './constants';
 import {fetchData} from '../store/utils'
 
 class SingleComic extends React.Component {
@@ -26,10 +29,12 @@ class SingleComic extends React.Component {
 
     return (
       <div>
-        <div>
-          <img src={comic.thumbnail.path + '.' + comic.thumbnail.extension} alt="Comic Thumbnail" />
-        </div>
-        <p>{comic.title}</p>
+        <Card className="text-center" style={{ width: '30rem' }}>
+          <CardImg src={comic.thumbnail.path + '.' + comic.thumbnail.extension} alt="Comic Thumbnail" />
+          <CardBody>
+            <CardTitle>{comic.title}</CardTitle>
+          </CardBody>
+        </Card>
       </div>
     )
   }
