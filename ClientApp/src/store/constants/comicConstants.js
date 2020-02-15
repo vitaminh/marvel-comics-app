@@ -1,0 +1,3 @@
+export const GET_COMIC_LIST = 'GET_COMIC_LIST';
+
+export const RETRIEVED_COMIC_LIST = 'RETRIEVED_COMIC_LIST';
