@@ -22,7 +22,7 @@ class ComicListPresentational extends React.Component {
 
     return (
       <div>
-        <CardGroup>
+        <CardGroup className="mx-auto" style={{ width: '64rem' }}>
           {this.props.comicList.comicList.map(comic => {
             const coverImgUrl = comic.thumbnail.path + '.' + comic.thumbnail.extension;
             return (

@@ -29,7 +29,7 @@ class SingleComic extends React.Component {
 
     return (
       <div>
-        <Card className="text-center" style={{ width: '30rem' }}>
+        <Card className="text-center mx-auto" style={{ width: '30rem' }}>
           <CardImg src={comic.thumbnail.path + '.' + comic.thumbnail.extension} alt="Comic Thumbnail" />
           <CardBody>
             <CardTitle>{comic.title}</CardTitle>
