@@ -23,18 +23,20 @@ class ComicListPresentational extends React.Component {
     return (
       <div>
         <CardGroup>
-          {this.props.comicList.comicList.map(comic => (
+          {this.props.comicList.comicList.map(comic => {
+            const coverImgUrl = comic.thumbnail.path + '.' + comic.thumbnail.extension;
+            return (
             <div key={comic.id}>
               <Link to={`/comics/${comic.id}`}>
                 <Card className="text-center" style={{ width: '16rem' }}>
-                  <CardImg top src={comic.thumbnail.path + '.' + comic.thumbnail.extension} />
+                  <CardImg top src={coverImgUrl} />
                   <CardBody>
                     <CardTitle>{comic.title}</CardTitle>
                   </CardBody>
                 </Card>
               </Link>
             </div>
-          ))}
+          )})}
         </CardGroup>
       </div>
     );
