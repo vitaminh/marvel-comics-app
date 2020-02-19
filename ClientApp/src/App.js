@@ -21,7 +21,7 @@ export default class App extends Component {
         <AuthorizeRoute path='/fetch-data' component={FetchData} />
         <Route path={ApplicationPaths.ApiAuthorizationPrefix} component={ApiAuthorizationRoutes} />
         <Route path="/comics/:id" component={SingleComic} />
-        <Route exact path='/' component={ComicList} />
+        <Route path='/' component={ComicList} />
       </Layout>
     );
   }

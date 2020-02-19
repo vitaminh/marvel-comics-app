@@ -1,9 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import {
-  Card, CardImg, CardBody, CardTitle, CardGroup
-} from 'reactstrap';
 
+import { ComicsGrid } from '../index';
 import { SITE_NAME } from '../constants';
 import store, { GET_COMIC_LIST } from '../../store';
 
@@ -22,24 +19,9 @@ class ComicListPresentational extends React.Component {
 
     return (
       <div>
-        <CardGroup className="mx-auto" style={{ width: '64rem' }}>
-          {this.props.comicList.comicList.map(comic => {
-            const coverImgUrl = comic.thumbnail.path + '.' + comic.thumbnail.extension;
-            return (
-            <div key={comic.id}>
-              <Link to={`/comics/${comic.id}`}>
-                <Card className="text-center" style={{ width: '16rem' }}>
-                  <CardImg top src={coverImgUrl} />
-                  <CardBody>
-                    <CardTitle>{comic.title}</CardTitle>
-                  </CardBody>
-                </Card>
-              </Link>
-            </div>
-          )})}
-        </CardGroup>
+        <ComicsGrid comicList={this.props.comicList.comicList} />
       </div>
-    );
+  );
   }
 }
 

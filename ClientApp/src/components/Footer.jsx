@@ -4,7 +4,7 @@ const currentDate = new Date();
 
 const Footer = props => {
   return (
-  <div class="border-top box-shadow text-center">
+  <div className="border-top box-shadow text-center">
     Data provided by <a href={'https://www.marvel.com/'}>Marvel</a>. © { currentDate.getFullYear() } Marvel
   </div>
   )
