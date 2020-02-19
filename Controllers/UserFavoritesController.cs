@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using marvel_comics_app.Data;
 using marvel_comics_app.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace marvel_comics_app.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class UserFavoritesController : ControllerBase

@@ -12,5 +12,8 @@ namespace marvel_comics_app.Models
         
         [Required]
         public long ComicId { get; set; }
+        
+        public string Title { get; set; }
+        public string CoverImageUrl { get; set; }
     }
 }
