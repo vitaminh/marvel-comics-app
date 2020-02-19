@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
-import {ComicList, SingleComic} from './components';
+import {ComicList, SingleComic, Favorites} from './components';
 import { Layout } from './components/Layout';
 // import { Home } from './components/Home';
 import { FetchData } from './components/FetchData';
@@ -21,7 +21,8 @@ export default class App extends Component {
         <AuthorizeRoute path='/fetch-data' component={FetchData} />
         <Route path={ApplicationPaths.ApiAuthorizationPrefix} component={ApiAuthorizationRoutes} />
         <Route path="/comics/:id" component={SingleComic} />
-        <Route path='/' component={ComicList} />
+        <Route path="/favorites" component={Favorites} />
+        <Route exact path='/' component={ComicList} />
       </Layout>
     );
   }

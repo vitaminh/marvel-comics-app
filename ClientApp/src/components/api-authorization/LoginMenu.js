@@ -3,6 +3,7 @@ import { NavItem, NavLink } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import authService from './AuthorizeService';
 import { ApplicationPaths } from './ApiAuthorizationConstants';
+import { Favorites } from '../index';
 
 export class LoginMenu extends Component {
     constructor(props) {
@@ -47,7 +48,7 @@ export class LoginMenu extends Component {
     authenticatedView(userName, profilePath, logoutPath) {
         return (<Fragment>
             <NavItem>
-                <NavLink>My Favorite Comics</NavLink>
+                <NavLink tag={Link} className="text-dark" to="/favorites">Favorites</NavLink>
             </NavItem>
             <NavItem>
                 <NavLink tag={Link} className="text-dark" to={profilePath}>{userName}</NavLink>
