@@ -17,5 +17,8 @@ namespace marvel_comics_app.Data
             IOptions<OperationalStoreOptions> operationalStoreOptions) : base(options, operationalStoreOptions)
         {
         }
+        
+        public DbSet<UserFavorites> UserFavorites { get; set; }
+        public DbSet<ComicData> ComicData { get; set; }
     }
 }
