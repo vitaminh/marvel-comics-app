@@ -14,34 +14,27 @@ class Favorites extends React.Component {
       {
         title: 'Fake Title',
         id: 84680,
-        thumbnail: {
-          path: "http://i.annihil.us/u/prod/marvel/i/mg/6/a0/5e42ca80e8907",
-          extension: "jpg"
-        }
+        coverImageUrl: 'http://i.annihil.us/u/prod/marvel/i/mg/6/a0/5e42ca80e8907.jpg'
       },
       {
         title: 'Another Fake Title',
-        id: 84680,
-        thumbnail: {
-          path: "http://i.annihil.us/u/prod/marvel/i/mg/6/a0/5e42ca80e8907",
-          extension: "jpg"
-        }
+        id: 84681,
+        coverImageUrl: 'http://i.annihil.us/u/prod/marvel/i/mg/6/a0/5e42ca80e8907.jpg'
       },
       {
         title: 'Yet Another Fake Title',
-        id: 84680,
-        thumbnail: {
-          path: "http://i.annihil.us/u/prod/marvel/i/mg/6/a0/5e42ca80e8907",
-          extension: "jpg"
-        }
+        id: 84682,
+        coverImageUrl: 'http://i.annihil.us/u/prod/marvel/i/mg/6/a0/5e42ca80e8907.jpg'
       },
       {
         title: 'Still Another Fake Title',
-        id: 84680,
-        thumbnail: {
-          path: "http://i.annihil.us/u/prod/marvel/i/mg/6/a0/5e42ca80e8907",
-          extension: "jpg"
-        }
+        id: 84683,
+        coverImageUrl: 'http://i.annihil.us/u/prod/marvel/i/mg/6/a0/5e42ca80e8907.jpg'
+      },
+      {
+        title: 'YEAH Another Fake Title',
+        id: 84684,
+        coverImageUrl: 'http://i.annihil.us/u/prod/marvel/i/mg/6/a0/5e42ca80e8907.jpg'
       }
     ];
 

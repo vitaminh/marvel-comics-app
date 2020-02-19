@@ -12,6 +12,10 @@ const fetchComicList = () => {
 export function* getComicList() {
   const response = yield call(fetchComicList);
   const comicList = response.data.data.results;
+  // create image url to make later image calls more convenient
+  comicList.forEach(comic => {
+    comic.coverImageUrl = comic.thumbnail.path + '.' + comic.thumbnail.extension;
+  })
   yield put(retrievedComicList(comicList));
 }
 
