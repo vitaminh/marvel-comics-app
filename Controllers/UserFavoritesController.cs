@@ -43,6 +43,18 @@ namespace marvel_comics_app.Controllers
 
             return userFavorites;
         }
+        
+        // GET: api/UserFavorites/me/userName
+        [HttpGet("me/{userName}")]
+        // public async Task<ActionResult<UserFavorites>> GetUserFavorites(string userName)
+        public async Task<ActionResult<IEnumerable<UserFavorites>>> GetUserFavorites(string userName)
+        {
+            var userFavorites = await _context.UserFavorites
+                .Where(favorite => favorite.UserId == userName)
+                .ToListAsync();
+
+            return new List<UserFavorites>();
+        }
 
         // PUT: api/UserFavorites/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for

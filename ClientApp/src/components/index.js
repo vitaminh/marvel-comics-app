@@ -8,6 +8,7 @@ export { default as CharacterList } from './characterList';
 export { default as ComicsGrid } from './ComicsGrid';
 export { default as ComicList } from './comicList';
 export { default as Favorites } from './Favorites';
+export { default as FavoritesButton } from './FavoritesButton';
 export { default as SingleComic } from './SingleComic';
 export { default as Header } from './Header';
 export { default as Footer } from './Footer';
